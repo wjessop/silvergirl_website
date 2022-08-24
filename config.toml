@@ -1,0 +1,43 @@
+baseURL = "https://sailingsilvergirl.com/"
+languageCode = "en"
+title = "Sailing Silver Girl"
+rssLimit = 20
+copyright = "&#169; Will Jessop. All rights reserved."
+
+[author]
+    name = "Will Jessop"
+    email = "will@willj.net"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    pre = "edit"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About Silver Girl"
+    titke = "About"
+    pre = "edit"
+    url = "/about-silver-girl/"
+    weight = 3
+ # [[menu.main]]
+ #   name = "Tags"
+ #   pre = "tag"
+ #   url = "/tags/"
+ #   weight = 3
+
+[outputs]
+  page = ["HTML", "RSS"]
+  home = ["HTML", "RSS"]
+  section = ["HTML","RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    baseName = "rss"

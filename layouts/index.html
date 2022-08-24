@@ -1,0 +1,23 @@
+{{ define "main" }}
+	<h2>{{ .Title }}</h2>
+
+	<p>	{{.Content}}</p>
+
+	<h3>Recent posts</h3>
+
+	<p>
+		<ul>
+			{{ range (first 10 (where .Site.RegularPages.ByPublishDate.Reverse "Type" "in" "Post")) }}
+			<li>
+				{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+				{{ $dateFormat := .Site.Params.dateFormat | default "Monday, January 2, 2006" }}
+				<a href="{{ .Permalink }}">{{ .Title }}</a> - <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+			</li>
+			{{ end }}
+		</ul>
+	</p>
+
+	<h3>Getting in touch</h3>
+
+	<p>If you want to get in touch with us for any reason you can find us on <a href="https://twitter.com/SYSilverGirl">Twitter</a>, or <a href="mailto:will@willj.net">E-mail</a>.</p>
+{{ end }}
