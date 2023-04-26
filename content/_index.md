@@ -5,3 +5,5 @@ draft: false
 ---
 
 Welcome to the website of sailing yacht Silver Girl!
+
+{{< figure src="Silver_Girl-small.jpeg#right" alt="Silver Girl at Port Pendennis marina in Falmouth" class="full" caption="Silver Girl at Port Pendennis marina in Falmouth">}}
