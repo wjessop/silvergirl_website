@@ -5,8 +5,6 @@ draft: false
 tags: ["maintenance"]
 category: ""
 summary: Going up the mast to check the rig
-outputs:
-- html
 type: Post
 Author: Will
 ---

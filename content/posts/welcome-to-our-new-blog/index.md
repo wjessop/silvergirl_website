@@ -5,8 +5,6 @@ draft: false
 tags: ["meta"]
 category: ""
 summary: Welcome to the new blog of the sailing yacht Silver Girl!
-outputs:
-- html
 type: Post
 Author: Will
 ---
