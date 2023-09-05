@@ -1,3 +1,24 @@
+:root {
+	--main-color: #3e3e3e;
+	--bg-color: #F5F5F0;
+	--blockquote-bg-color: #f3f3f3;
+	--code-bg-color: #f3f3f3;
+	--a-color: rgb(0, 102, 204);
+	--a-color-visited: #1a0dab;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-color: #d0d0d0;
+		--bg-color: #252525;
+
+		--a-color: #8798e2;
+		--a-color-visited: #554dac;
+		--blockquote-bg-color: #5b5b5b;
+		--code-bg-color: #5b5b5b;
+	}
+}
+
 body {
 	font-family: Consolas,
 							 Monospace, /* Linux = DejaVu Sans Mono */
@@ -8,8 +29,8 @@ body {
 	padding-left: 2%;
 	padding-right: 3%;
 	margin: 0 auto;
-	background: #F5F5F0;
-	color: #3e3e3e;
+	background: var(--bg-color);
+	color: var(--main-color);
 
 	nav {
 		margin-bottom: 20px;
@@ -17,6 +38,12 @@ body {
 }
 
 a {
+	color: var(--a-color-visited);
+	font-weight: bold;
+}
+
+a:visited {
+	color: var(--a-color);
 	font-weight: bold;
 }
 
@@ -58,22 +85,8 @@ div.heading {
 
 @media (max-width: 500px) { /* For small screen decices */
 	*{
-		font-size: 1em;
+		font-size: 12px;
 	}
-
-	h1 {
-		font-size: 1.4em;
-	}
-
-	h2 {
-		font-size: 1.1em;
-	}
-
-	body {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-
 	pre {
 	 font-size: 11px;
 	}
@@ -90,7 +103,7 @@ img.pixel, canvas.pixel {
 }
 
 blockquote {
-	background-color: #f3f3f3;
+	background-color: var(--blockquote-bg-color);
 	border: dashed 1px grey;
 	width: 97.5%;
 	font-style: italic;
@@ -128,7 +141,6 @@ post_list {
 /* ----- Posts ----- */
 
 article {
-
 	h1,h2 {
 		clear: both;
 	}
@@ -218,16 +230,8 @@ article {
 	table {
 		margin-bottom: 40px;
 	}
-}
 
-footer {
-	margin-top: 50px;
-
-	hr {
-		margin-top: 10px;
-	}
-
-	p {
-		text-align: center;
+	pre {
+		background: var(--code-bg-color);
 	}
 }
