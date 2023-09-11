@@ -55,6 +55,32 @@ img {
 	border: none;
 }
 
+div.clearfix {
+	clear: both;
+}
+
+about-me {
+	display: block;
+	background-color: #e0e0e0;
+	padding: 10px;
+
+	img {
+		float: right;
+		padding: 8px;
+		margin: 5px;
+		margin-left: 10px;
+	}
+
+	p {
+		font-size: 21px;
+		padding: 0px 5px;
+	}
+}
+
+hr {
+	clear: both;
+}
+
 p {
 	margin-top: 0px;
 	margin-bottom: 4ch;
@@ -102,31 +128,6 @@ img.pixel, canvas.pixel {
 	image-rendering: crisp-edges;
 }
 
-blockquote {
-	background-color: var(--blockquote-bg-color);
-	border: dashed 1px grey;
-	width: 97.5%;
-	font-style: italic;
-	text-align: justify;
-
-	padding: 2ch;
-
-	margin-right: 2ch;
-	margin-left: 2ch;
-	margin-bottom: 2ch;
-	margin-top: 0ch;
-
-	p:last-child {
-		margin-bottom: 0px;
-	}
-}
-
-blockquote div {
-	text-transform: none;
-	text-align: right;
-	width: 100%;
-}
-
 /* ----- Post list ----- */
 
 post_list {
@@ -141,13 +142,36 @@ post_list {
 /* ----- Posts ----- */
 
 article {
+	blockquote {
+		background-color: var(--blockquote-bg-color);
+		border: dashed 1px grey;
+		font-style: italic;
+		text-align: justify;
+
+		padding: 2ch;
+
+		// margin-right: 2ch;
+		margin-left: 2ch;
+		margin-bottom: 2ch;
+		margin-top: 0ch;
+
+		p:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	blockquote div {
+		text-transform: none;
+		text-align: right;
+		width: 100%;
+	}
+
 	h1,h2 {
 		clear: both;
 	}
 
 	hr {
 		width: 100%;
-		clear: both;
 		height: 1px;
 		border: 0px;
 		background-color: rgb(161, 161, 161);
@@ -229,8 +253,8 @@ article {
 				margin-left: 30px;
 			}
 
-			p:after {
-				content: "⤴"
+			h4:before {
+				content: "⤴ "
 			}
 		}
 	}
@@ -245,5 +269,17 @@ article {
 
 	pre {
 		background: var(--code-bg-color);
+	}
+
+	p {
+		// multiling blocks, eg those with fences, don't look good formatted with
+		// this style so rely on the attributes that are present when these are
+		// generated to ignore them.
+		code:not([data-lang]) {
+			background-color: #595959;
+			color: #e3e2e2;
+			padding: 4px 8px;
+			border-radius: 5px;
+		}
 	}
 }
