@@ -10,6 +10,9 @@
 	--bg-color-about-me: #e0e0e0;
 	--bg-color-aside: #e0e0e0;
 	--border-color-aside: #252525;
+
+	--bg-color-contracts: #767676;
+	--text-color-contracts: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +28,9 @@
 		--bg-color-about-me: #1a1a1a;
 		--bg-color-aside: rgb(61, 61, 61);
 		--border-color-aside: #d0d0d0;
+
+		--bg-color-contracts: #767676;
+		--text-color-contracts: #ededed;
 	}
 }
 
@@ -165,6 +171,19 @@ p, li {
 	}
 }
 
+pre{
+		margin-bottom: 4ch;
+}
+
+div.open-to-contracts {
+	border-radius: 10px;
+	background-color: var(--bg-color-contracts);
+	color: var(--text-color-contracts);
+	padding: 20px;
+	margin-bottom: 30px;
+	font-size: 1.2rem;
+}
+
 /*
 	Fixes iOS font sizing anomaly
 
@@ -188,6 +207,32 @@ post_list {
 	}
 }
 
+/* ----- Tag list ----- */
+
+.tag-list {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    margin-bottom: 30px;
+
+		a.tag-title {
+			font-size: 1.2em;
+		}
+
+    .first-post {
+			margin: 10px 0px 0px 40px;
+
+			p.summary {
+				margin: 5px 0px 25px 0px;
+		padding: 0px 0px 0px 15px;
+		border-left: 1px solid #3e3e3e;
+		font-style: italic;
+			}
+    }
+  }
+}
+
 /* ----- Posts ----- */
 
 article {
@@ -199,10 +244,8 @@ article {
 
 		padding: 2ch;
 
-		// margin-right: 2ch;
-		margin-left: 2ch;
-		margin-bottom: 2ch;
-		margin-top: 0ch;
+		margin: 2ch 0ch 4ch 2ch;
+
 
 		p:last-child {
 			margin-bottom: 0px;

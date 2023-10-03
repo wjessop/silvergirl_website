@@ -8,7 +8,9 @@
   --code-bg-color: #f3f3f3;
   --bg-color-about-me: #e0e0e0;
   --bg-color-aside: #e0e0e0;
-  --border-color-aside: #252525; }
+  --border-color-aside: #252525;
+  --bg-color-contracts: #767676;
+  --text-color-contracts: #ededed; }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -20,7 +22,9 @@
     --code-bg-color: #5b5b5b;
     --bg-color-about-me: #1a1a1a;
     --bg-color-aside: rgb(61, 61, 61);
-    --border-color-aside: #d0d0d0; } }
+    --border-color-aside: #d0d0d0;
+    --bg-color-contracts: #767676;
+    --text-color-contracts: #ededed; } }
 
 body {
   font-family: Consolas, Monospace, Courier;
@@ -118,6 +122,17 @@ p > code:not([data-lang]), li > code:not([data-lang]) {
   padding: 4px 8px;
   border-radius: 5px; }
 
+pre {
+  margin-bottom: 4ch; }
+
+div.open-to-contracts {
+  border-radius: 10px;
+  background-color: var(--bg-color-contracts);
+  color: var(--text-color-contracts);
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 1.2rem; }
+
 /*
 	Fixes iOS font sizing anomaly
 
@@ -136,6 +151,22 @@ post_list ul p {
   border-left: 1px solid #3e3e3e;
   font-style: italic; }
 
+/* ----- Tag list ----- */
+.tag-list {
+  list-style-type: none;
+  padding-left: 0; }
+  .tag-list li {
+    margin-bottom: 30px; }
+    .tag-list li a.tag-title {
+      font-size: 1.2em; }
+    .tag-list li .first-post {
+      margin: 10px 0px 0px 40px; }
+      .tag-list li .first-post p.summary {
+        margin: 5px 0px 25px 0px;
+        padding: 0px 0px 0px 15px;
+        border-left: 1px solid #3e3e3e;
+        font-style: italic; }
+
 /* ----- Posts ----- */
 article blockquote {
   background-color: var(--blockquote-bg-color);
@@ -143,9 +174,7 @@ article blockquote {
   font-style: italic;
   text-align: justify;
   padding: 2ch;
-  margin-left: 2ch;
-  margin-bottom: 2ch;
-  margin-top: 0ch; }
+  margin: 2ch 0ch 4ch 2ch; }
   article blockquote p:last-child {
     margin-bottom: 0px; }
 
