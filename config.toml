@@ -25,18 +25,26 @@ copyright = "&#169; Will Jessop. All rights reserved."
     pre = "edit"
     url = "/about-silver-girl/"
     weight = 3
- # [[menu.main]]
- #   name = "Tags"
- #   pre = "tag"
- #   url = "/tags/"
- #   weight = 3
+  [[menu.main]]
+    name = "Tags"
+    pre = "tag"
+    url = "/tags/"
+    weight = 3
 
 [outputs]
-  page = ["HTML", "RSS"]
+  page = ["HTML"]
   home = ["HTML", "RSS"]
-  section = ["HTML","RSS"]
-  taxonomy = ["HTML", "RSS"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
 
 [outputFormats]
   [outputFormats.RSS]
     baseName = "rss"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
