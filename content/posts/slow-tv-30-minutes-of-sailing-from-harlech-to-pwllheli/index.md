@@ -1,6 +1,6 @@
 ---
 title: "Slow TV, 30 minutes of sailing from Harlech to Pwllheli, North Wales"
-date: 2023-10-03T16:00:00+01:00
+date: 2023-10-03T15:37:00+01:00
 draft: false
 tags: [sailing, Wales, video, Slow TV]
 category: ""
